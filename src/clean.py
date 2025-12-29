@@ -29,7 +29,7 @@ def _load_category_map(category_map_path: Optional[Path]) -> dict[str, str]:
     if not expected.issubset(set(m.columns)):
         raise ValueError(f"Category map must have columns {expected}. Found: {set(m.columns)}")
 
-    # Strip whitespace in mapping too
+    # Strip whitespace in mapping as well
     m["raw"] = m["raw"].astype(str).str.strip()
     m["normalized"] = m["normalized"].astype(str).str.strip()
     return dict(zip(m["raw"], m["normalized"]))
