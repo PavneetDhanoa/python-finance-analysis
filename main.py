@@ -58,7 +58,7 @@ def main() -> int:
         out_figures_dir=figures_dir,
     )
 
-    # Console summary
+    # Console summary in there
     console_summary = build_console_summary(cleaned_df, top_n=5)
     print_console_summary(console_summary)
 
